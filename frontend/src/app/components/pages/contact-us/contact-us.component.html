@@ -1,0 +1,33 @@
+<div class="contact-us-container">
+    <div class="form-container">
+      <h2>Contact Us</h2>
+      <p>Feel free to reach out to us with any questions or concerns.</p>
+  
+      <form (ngSubmit)="submitForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+  
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" [(ngModel)]="formData.message" required></textarea>
+  
+        <button type="submit">Submit</button>
+      </form>
+  
+      <!-- Display success message -->
+      <div *ngIf="successMessage" class="success-message">
+        {{ successMessage }}
+      </div>
+    </div>
+  
+    <div class="contact-info-container">
+      <h3>Contact Information:</h3>
+      <p>Email: info.com</p>
+      <p>Phone: +1 123 456 7890</p>
+      <p>Address: 123 Main Street, Cityville, Country</p>
+      <img src="./assets/About1.jpg" width="350px" height="300px"/>
+    </div>
+  </div>
+  

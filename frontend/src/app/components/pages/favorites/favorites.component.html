@@ -1,0 +1,31 @@
+<div *ngIf="favoriteItems.length > 0; else noFavorites">
+    <ul *ngFor="let food of favoriteItems">
+      <li class="favorite-item">
+        <img [src]="food.imageUrl" [alt]="food.name" />
+        <div class="content">
+          <div class="name">
+            {{ food.name }}
+          </div>
+          <span class="favorite {{ food.favorite ? '' : 'not' }}" (click)="toggleFavorite(food)">
+            ❤
+          </span>
+          <div class="product-item-footer">
+            <div class="cook-time">
+              <span>🕒</span>
+              {{ food.cookTime }}
+            </div>
+          </div>
+          <div class="price">
+            <span>
+              {{ food.price | currency }}
+            </span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <ng-template #noFavorites>
+    <p>No favorite items yet!</p>
+  </ng-template>
+  

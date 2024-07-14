@@ -1,0 +1,17 @@
+div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+div a{
+    display: flex;
+    padding: 10px 20px;
+    margin: 0 20px;
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+    font-weight: bold;
+    color: black;
+}
